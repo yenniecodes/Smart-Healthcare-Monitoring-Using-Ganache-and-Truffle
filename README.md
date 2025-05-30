@@ -47,6 +47,7 @@ SMARTMONITORING/
 ├── build/                           ← Generated on compile
 ├── test/                            ← (optional test folder)
 └── truffle-config.js
+
 ---
 
 ## Setup Guide
