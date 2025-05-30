@@ -36,12 +36,16 @@ This project simulates an IoT-based health monitoring system that stores patient
 ## Folder Structure
 
 SmartHealthMonitoringIoT/
+
 ├── contracts/
-│   └── IoTDataStorage.sol
+│   
+└── IoTDataStorage.sol
 ├── migrations/
-│   └── 2_deploy_contracts.js
+│   
+└── 2_deploy_contracts.js
 ├── build/contracts/
-│   └── IoTDataStorage.json (auto-generated after compiling)
+│   
+└── IoTDataStorage.json (auto-generated after compiling)
 ├── iot_data_records.csv
 ├── IotSim.ipynb
 ├── truffle-config.js
