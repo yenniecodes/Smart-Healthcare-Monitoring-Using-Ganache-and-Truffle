@@ -38,15 +38,18 @@ This project simulates an IoT-based health monitoring system that stores patient
 SmartHealthMonitoringIoT/
 
 ├── contracts/
+
 │   
 └── IoTDataStorage.sol
 
 ├── migrations/
+
 │   
 
 └── 2_deploy_contracts.js
 
 ├── build/contracts/
+
 │   
 └── IoTDataStorage.json (auto-generated after compiling)
 
