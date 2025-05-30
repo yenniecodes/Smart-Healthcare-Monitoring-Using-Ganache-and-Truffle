@@ -41,7 +41,9 @@ Copy
 Edit
 npm install -g ganache
 4. ✅ Set up Python Environment
-Install Python 3.10+ and pip if not already installed.
+Install Python 3.10+ and pip if not already installed.```
+
+---
 
 Install required libraries:
 
@@ -116,8 +118,3 @@ You can use the getTotalRecords() and getRecord() functions in the notebook to r
 ❌ Web3 connection error? Make sure Ganache is running on http://127.0.0.1:7545.
 
 ❌ FileNotFoundError for CSV? Check that your .csv file is in the same folder as the notebook and properly named.
-
-📬 Authors
-👨‍💻 IoT Data Generator and Smart Contract Integration: Your Name
-
-🧪 Blockchain Simulation: You
