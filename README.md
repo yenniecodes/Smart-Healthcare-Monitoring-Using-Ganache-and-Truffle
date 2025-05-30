@@ -40,15 +40,22 @@ SmartHealthMonitoringIoT/
 ├── contracts/
 │   
 └── IoTDataStorage.sol
+
 ├── migrations/
 │   
+
 └── 2_deploy_contracts.js
+
 ├── build/contracts/
 │   
 └── IoTDataStorage.json (auto-generated after compiling)
+
 ├── iot_data_records.csv
+
 ├── IotSim.ipynb
+
 ├── truffle-config.js
+
 └── README.md
 
 ---
