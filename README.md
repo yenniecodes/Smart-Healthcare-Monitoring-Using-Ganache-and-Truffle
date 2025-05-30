@@ -1,120 +1,98 @@
 # Smart-Healthcare-Monitoring-Using-Ganache-and-Truffle
 
-# 📡 IoT Smart Health Monitoring with Blockchain
+# IoT Smart Health Monitoring with Blockchain
 
-This project simulates an IoT-based health monitoring system that stores patient vital signs on a blockchain using a smart contract written in Solidity. The system is built using:
+This project simulates an IoT-based health monitoring system that stores patient vital signs on a blockchain using a smart contract written in Solidity. It uses:
 
-- 🧱 **Truffle Framework**
-- 🧪 **Ganache** (local Ethereum blockchain)
-- 🐍 **Python** with **Web3.py** for sending simulated data
-- 📊 **CSV-based IoT data** with Filipino names and realistic vital signs
-
----
-
-## 🚀 Prerequisites
-
-### 1. ✅ Install Node.js and npm
-[Download Node.js](https://nodejs.org/) (recommended version: 18.x or above)
-
-Verify installation:
-```bash
-node -v
-npm -v
-2. ✅ Install Truffle (globally)
-bash
-Copy
-Edit
-npm install -g truffle
-Verify:
-
-bash
-Copy
-Edit
-truffle version
-3. ✅ Install Ganache
-Option A: GUI (Recommended)
-Download Ganache GUI
-
-Option B: CLI (if preferred)
-bash
-Copy
-Edit
-npm install -g ganache
-4. ✅ Set up Python Environment
-Install Python 3.10+ and pip if not already installed.```
+- Truffle Framework
+- Ganache (local Ethereum blockchain)
+- Python with Web3.py for sending simulated data
+- CSV-based IoT data with Filipino names and realistic vitals
 
 ---
 
-Install required libraries:
+## Prerequisites
 
-bash
-Copy
-Edit
-pip install web3 pandas
-📁 Project Structure
-bash
-Copy
-Edit
+1. Install Node.js and npm
+   Download: https://nodejs.org/
+   Then verify:
+   node -v
+   npm -v
+
+2. Install Truffle globally
+   npm install -g truffle
+   truffle version
+
+3. Install Ganache
+   Option A (GUI - recommended): https://trufflesuite.com/ganache/
+   Option B (CLI):
+   npm install -g ganache
+
+4. Install Python dependencies
+   pip install web3 pandas
+
+---
+
+## Folder Structure
+
 SmartHealthMonitoringIoT/
-│
 ├── contracts/
-│   └── IoTDataStorage.sol       # Smart contract
+│   └── IoTDataStorage.sol
 ├── migrations/
-│   └── 2_deploy_contracts.js   # Truffle deployment script
+│   └── 2_deploy_contracts.js
 ├── build/contracts/
-│   └── IoTDataStorage.json     # ABI and contract metadata (auto-generated)
-├── iot_data_records.csv        # Simulated patient IoT data
-├── IotSim.ipynb                # Jupyter Notebook to send data
-├── truffle-config.js           # Truffle network & compiler settings
-└── README.md                   # This guide
-⚙️ Setting Up
-1. Clone / download this repo
-bash
-Copy
-Edit
-cd SmartHealthMonitoringIoT
-2. Remove old builds (optional)
-bash
-Copy
-Edit
-Remove-Item -Recurse -Force .\build\   # For PowerShell
-# or
-rm -rf build/                          # For Linux/macOS
+│   └── IoTDataStorage.json (auto-generated after compiling)
+├── iot_data_records.csv
+├── IotSim.ipynb
+├── truffle-config.js
+└── README.md
+
+---
+
+## Setup Guide
+
+1. Clone or open the project folder in terminal
+
+2. (Optional) Clear old build cache
+   Windows:
+   Remove-Item -Recurse -Force .\build\
+   macOS/Linux:
+   rm -rf build/
+
 3. Compile the contract
-bash
-Copy
-Edit
-truffle compile --all
-4. Run Ganache GUI (or CLI)
-Start a new workspace with default settings.
+   truffle compile --all
 
-Leave it running in the background.
+4. Start Ganache GUI or run:
+   ganache
 
-5. Deploy contract to Ganache
-bash
-Copy
-Edit
-truffle migrate --reset
-📝 Copy the deployed contract address from terminal. You’ll need this for Python code.
+5. Deploy the contract
+   truffle migrate --reset
+   (Copy the new contract address)
 
-🐍 Simulate IoT Data (Python)
-1. Open IotSim.ipynb in Jupyter Notebook
-bash
-Copy
-Edit
-jupyter notebook
-2. Modify the contract address in Cell 1:
-python
-Copy
-Edit
-contract_address = "0xYour_Deployed_Address"
-3. Run the notebook to start storing simulated data.
-🔍 View Data (Optional)
-You can use the getTotalRecords() and getRecord() functions in the notebook to retrieve stored data.
+---
 
-🛠 Troubleshooting
-❌ "invalid opcode" on deploy? Run truffle migrate --reset and check your .sol code.
+## Running the Simulation
 
-❌ Web3 connection error? Make sure Ganache is running on http://127.0.0.1:7545.
+1. Open Jupyter Notebook
+   jupyter notebook
 
-❌ FileNotFoundError for CSV? Check that your .csv file is in the same folder as the notebook and properly named.
+2. Open IotSim.ipynb
+
+3. In Cell 1, update the contract address:
+   contract_address = "0xYourNewContractAddress"
+
+4. Run all cells to start storing the 500 simulated records to the blockchain
+
+---
+
+## Tips
+
+- "invalid opcode" error? Re-deploy with truffle migrate --reset
+- Connection error? Check Ganache is running at http://127.0.0.1:7545
+- File not found? Make sure CSV file is in same folder as notebook
+
+---
+
+## Authors
+
+- Blockchain & Simulation: Mary Jullianne Maycacayan
