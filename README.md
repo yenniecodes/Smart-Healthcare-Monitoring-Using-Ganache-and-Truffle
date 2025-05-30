@@ -43,7 +43,9 @@ SMARTMONITORING/
 
 ├── iot_data_records.csv
 
-│   ├── MO-IT148_Homework_IoT_Data_Simulation_A3101_Group_LMN.csv
+│   
+
+├── MO-IT148_Homework_IoT_Data_Simulation_A3101_Group_LMN.csv
 
 │   
 
@@ -57,7 +59,9 @@ SMARTMONITORING/
 
 ├── migrations/
 
-│   └── 2_deploy_contracts.js        ← Truffle deployment script
+│   
+
+└── 2_deploy_contracts.js        ← Truffle deployment script
 
 ├── build/                           ← Generated on compile
 
