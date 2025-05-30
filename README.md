@@ -36,16 +36,33 @@ This project simulates an IoT-based health monitoring system that stores patient
 ## Folder Structure
 
 SMARTMONITORING/
+
 ├── ADET/
-│   ├── iot_data_records.csv
+
+│   
+
+├── iot_data_records.csv
+
 │   ├── MO-IT148_Homework_IoT_Data_Simulation_A3101_Group_LMN.csv
-│   └── IotSim.ipynb                  ← Jupyter Notebook for data simulation
+
+│   
+
+└── IotSim.ipynb                  ← Jupyter Notebook for data simulation
+
 ├── contracts/
-│   └── IoTDataStorage.sol           ← Solidity contract
+
+│   
+
+└── IoTDataStorage.sol           ← Solidity contract
+
 ├── migrations/
+
 │   └── 2_deploy_contracts.js        ← Truffle deployment script
+
 ├── build/                           ← Generated on compile
+
 ├── test/                            ← (optional test folder)
+
 └── truffle-config.js
 
 ---
